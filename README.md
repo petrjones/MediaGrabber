@@ -1,8 +1,8 @@
 # MediaGrabber
 
 [![Latest release](https://img.shields.io/github/v/release/petrjones/MediaGrabber?style=flat-square)](https://github.com/petrjones/MediaGrabber/releases/latest)
-![Windows x64](https://img.shields.io/badge/Windows-x64-0078D6?style=flat-square&logo=windows)
-![Languages](https://img.shields.io/badge/languages-English%20%7C%20Czech%20%7C%20Spanish-268BD2?style=flat-square)
+[![Windows x64](https://img.shields.io/badge/Windows-x64-0078D6?style=flat-square&logo=windows)](https://github.com/petrjones/MediaGrabber/releases/latest)
+[![Languages](https://img.shields.io/badge/languages-English%20%7C%20Czech%20%7C%20Spanish-268BD2?style=flat-square)](https://github.com/petrjones/MediaGrabber#readme)
 
 A free and portable Windows application for downloading videos, audio and playlists.
 
