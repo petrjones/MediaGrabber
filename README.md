@@ -8,7 +8,7 @@
 
 ## English
 
-**MediaGrabber by PJSoft is a free, portable Windows application for downloading videos, audio and playlists.** It provides a graphical interface for yt-dlp and FFmpeg, with control over quality, subtitles, playlist selections, album organization and metadata.
+**MediaGrabber by PJSoft is a free, portable Windows application for downloading videos, audio and playlists.** It provides a graphical interface for yt-dlp and FFmpeg, with Basic and Advanced controls for quality, subtitles, playlist selections, album organization, audio loudness and optional SponsorBlock editing.
 
 ### Download
 
@@ -26,6 +26,13 @@ No installation is required. Application files are directly inside the ZIP; keep
 
 ### Main features
 
+- **Basic and Advanced modes:** keep everyday controls simple and expand additional options when needed. The active-options summary discloses settings in collapsed sections.
+- **Remember last settings:** optionally restore general download preferences without carrying source links, omissions or time selections over to unrelated jobs.
+- **Pause, resume and reorder:** finish the current item before pausing, move waiting albums or videos up/down, then continue. Optional sleep protection keeps the computer awake while downloading; the display may turn off.
+- **Multiple links and TXT lists:** use shared settings or configure format, quality, destination and playlist selection separately for each link.
+- **History and queue backup:** export/import links and settings without copying media. Already-downloaded warnings take settings and existing files into account.
+- **Audio loudness:** keep audio unchanged, write ReplayGain/R128 playback tags, or adjust the audio during final encoding. Level tracks individually or preserve album differences with shared album gain.
+- **Optional SponsorBlock:** remove community-marked sponsor messages, intro animations, endcards/credits and subscribe/like reminders from YouTube videos or audio. Works with selected playlist entries; downloaded SRT subtitle timing is adjusted after editing.
 - Download video with audio or audio only, with quality and format choices including MP3 presets up to 320 kb/s. Available quality depends on the source.
 - Preview available artwork, titles, duration and source information before downloading.
 - Select individual playlist items, select all, clear or invert a selection, and enter omissions as compact number ranges. Optional renumbering is available.
@@ -34,7 +41,7 @@ No installation is required. Application files are directly inside the ZIP; keep
 - Optionally create **cover.jpg**, an **album.m3u8** playback list and an **album.txt** overview with source links.
 - Check for duplicates in the chosen destination and its subfolders. A reusable local folder index speeds up subsequent searches.
 - Review completed, failed and skipped items with available titles, source links and actual error messages. Retry unfinished items while keeping successful downloads.
-- Optionally save unfinished queue jobs and offer to restore them after restarting the application.
+- Optionally save unfinished queue jobs and offer to restore them after restarting the application, including their order and paused state.
 - Use an optional download history to locate files, copy source links, repeat downloads or remove records without deleting media. Quickly choose among five recent destinations.
 - Keep downloading while minimized or behind another application. Optional Always on top, contextual help and silent Windows completion notifications are available.
 - Search for alternative recordings in a side panel and review available information before choosing a different link.
@@ -56,11 +63,19 @@ Chapter splitting requires timing information supplied by the source; it does no
 
 The first duplicate index may take longer for a large archive or slow drive and is built in the background. Previously recorded downloads can be verified using their source, settings and existing output files. Older filename matches are suggestions, not proof of an identical recording. Alternative-recording search also uses text and technical information, not audio fingerprinting.
 
+### Audio loudness and SponsorBlock
+
+Loudness processing is **off by default** and currently applies to **audio-only output**. ReplayGain/R128 needs a compatible player with tag-based leveling enabled. Actual file adjustment works independently of that support. Shared album gain preserves relative loudness between album tracks; peak protection can keep some results quieter. Loudness adjustment does not restore missing source quality.
+
+SponsorBlock is **off by default** and relies on community marks for YouTube. Without suitable marks the recording remains whole. A recognized service failure can leave a successful uncut download with a notice; genuine media errors remain errors. It removes marked messages inside recordings, not separate YouTube ads.
+
+Fast cuts preserve the video encoding but can have imprecise boundaries. The optional more precise mode re-encodes the video, takes longer and may change picture quality; frame-perfect boundaries are not guaranteed. SponsorBlock is suspended for manual time segments or chapter splitting. Existing destination files are preserved; choose another folder for an edited variant of an already downloaded recording.
+
 ### What's new
 
-Version **3.12.0** brings together the improvements since 3.8.0: the redesigned dark blue interface, indexed duplicate checks, clearer results and queue recovery, accurate audio information, album artwork and numbering fixes, optional album companion files, faster selected-playlist downloads, and five additional language variants with automatic first-run language selection.
+Version **4.3.0** brings together Basic and Advanced modes, remembered download preferences, batch links with individual settings, history/queue backup, queue pause and reordering, sleep protection, audio loudness options and optional SponsorBlock editing. Subtitle fallback and chapter-track results have also been improved.
 
-**[Read the 3.12.0 release notes in English and Czech](https://github.com/petrjones/MediaGrabber/releases/tag/v3.12.0)**
+**[Read the 4.3.0 release notes in English and Czech](https://github.com/petrjones/MediaGrabber/releases/tag/v4.3.0)**
 
 ### Free use and voluntary support
 
@@ -72,7 +87,7 @@ The application includes a support option for those who wish to help with develo
 
 ## Česky
 
-**MediaGrabber od PJSoft je bezplatná přenosná aplikace pro Windows ke stahování videí, zvuku a playlistů.** Nabízí grafické rozhraní pro yt-dlp a FFmpeg s výběrem kvality, titulků, položek playlistu, uspořádání alb a metadat.
+**MediaGrabber od PJSoft je bezplatná přenosná aplikace pro Windows ke stahování videí, zvuku a playlistů.** Nabízí grafické rozhraní pro yt-dlp a FFmpeg se Základním a Rozšířeným ovládáním kvality, titulků, položek playlistu, uspořádání alb, hlasitosti zvuku a volitelného střihu pomocí SponsorBlocku.
 
 ### Stažení
 
@@ -90,6 +105,13 @@ Instalace není potřeba. Soubory aplikace jsou přímo v kořeni ZIPu; rozbalen
 
 ### Hlavní funkce
 
+- **Základní a Rozšířený režim:** jednoduché běžné ovládání a rozbalení podrobností podle potřeby. Přehled aktivních voleb ukazuje i nastavení ve sbalených nabídkách.
+- **Zapamatovat poslední nastavení:** volitelné obnovení obecných předvoleb bez přenášení odkazů, vynechaných položek či časových výběrů na nesouvisející úlohy.
+- **Pozastavení, pokračování a změna pořadí:** před pozastavením se dokončí aktuální položka, čekající alba či videa lze přesouvat šipkami. Volitelná ochrana před uspáním udržuje počítač při stahování v chodu; obrazovka může zhasnout.
+- **Více odkazů a seznamy TXT:** společné nastavení nebo samostatná volba formátu, kvality, cíle a výběru playlistu pro každý odkaz.
+- **Záloha historie a fronty:** export/import odkazů a nastavení bez kopírování médií. Upozornění na již stažené záznamy zohledňuje nastavení i existenci souborů.
+- **Srovnání hlasitosti zvuku:** ponechání beze změny, zápis údajů ReplayGain/R128 nebo skutečná úprava při vytváření výsledného zvuku. Lze srovnávat skladby jednotlivě nebo zachovat rozdíly uvnitř alba společným zesílením.
+- **Volitelný SponsorBlock:** vystřižení komunitou označených sponzorských vzkazů, úvodních znělek, závěrů/titulků a připomínek odběru či hodnocení z videí nebo zvuku YouTube. Podporuje vybrané položky playlistu a úpravu časování stažených titulků SRT.
 - Stažení videa se zvukem nebo samotné zvukové stopy, výběr kvality a formátu včetně předvoleb MP3 až 320 kb/s. Dostupná kvalita závisí na zdroji.
 - Náhled dostupného obrázku, názvu, délky a údajů o zdroji před stahováním.
 - Výběr jednotlivých položek playlistu, označení všech, zrušení či inverze výběru a zadání vynechání číselnými rozsahy. Volitelné přečíslování.
@@ -98,7 +120,7 @@ Instalace není potřeba. Soubory aplikace jsou přímo v kořeni ZIPu; rozbalen
 - Volitelné vytvoření obalu **cover.jpg**, seznamu skladeb **album.m3u8** a přehledu **album.txt** se zdrojovými odkazy.
 - Kontrola duplicit v cílové složce včetně podsložek. Uložený místní index urychluje další hledání.
 - Přehled dokončených, neúspěšných a přeskočených položek s dostupnými názvy, odkazy a skutečnými chybovými zprávami. Opakování nedokončených položek se zachováním hotových souborů.
-- Volitelné ukládání rozpracované fronty s nabídkou obnovení po dalším spuštění.
+- Volitelné ukládání rozpracované fronty s nabídkou obnovení po dalším spuštění, včetně pořadí a pozastavení.
 - Volitelná historie pro zobrazení souboru, kopírování zdrojového odkazu, opakování stažení či odstranění záznamu bez smazání médií. Rychlý výběr z pěti posledních cílových složek.
 - Stahování pokračuje i při minimalizaci nebo překrytí jiným oknem. K dispozici je režim Vždy navrchu, bublinová nápověda a tichá oznámení Windows.
 - Hledání alternativních nahrávek v bočním panelu s možností posoudit dostupné údaje před výběrem jiného odkazu.
@@ -120,11 +142,19 @@ Rozdělení podle kapitol vyžaduje časové údaje zdroje; skladby se automatic
 
 První vytvoření indexu duplicit může ve velkém archivu či na pomalém disku trvat déle a probíhá na pozadí. Dříve zaznamenaná stažení lze ověřit podle zdroje, nastavení a existujících výsledných souborů. Shody názvů starších souborů jsou návrhy, nikoli důkaz totožné nahrávky. Také hledání alternativ pracuje s textovými a technickými informacemi, nikoli s hudebními otisky.
 
+### Srovnání hlasitosti a SponsorBlock
+
+Srovnání hlasitosti je **ve výchozím nastavení vypnuté** a zatím se týká **pouze zvukového výstupu**. ReplayGain/R128 vyžaduje podporovaný přehrávač se zapnutým vyrovnáváním podle těchto údajů. Skutečná úprava souboru na této podpoře nezávisí. Společné zesílení alba zachovává rozdíly mezi jeho skladbami; ochrana špiček může ponechat některý výsledek tišší. Funkce neobnovuje chybějící kvalitu zdroje.
+
+SponsorBlock je **ve výchozím nastavení vypnutý** a využívá komunitní označení pro YouTube. Bez vhodného označení zůstává záznam celý. Při rozpoznaném výpadku služby může stažení proběhnout bez střihu s upozorněním; skutečné chyby médií zůstávají chybami. Odstraňuje označená sdělení uvnitř záznamů, nikoli samostatné reklamy YouTube.
+
+Rychlý střih zachovává kódování obrazu, ale může mít nepřesné hranice. Volitelný přesnější střih video znovu kóduje, trvá déle a může změnit kvalitu; přesnost na každý snímek není zaručena. Při ručním časovém úseku nebo dělení kapitol je SponsorBlock pozastaven. Existující cílové soubory zůstávají zachované; pro upravenou variantu dříve staženého záznamu zvolte jinou složku.
+
 ### Co je nového
 
-Verze **3.12.0** shrnuje změny od 3.8.0: nové tmavě modré rozhraní, indexovanou kontrolu duplicit, přehlednější výsledky a obnovení fronty, skutečné údaje o zvuku, opravy obalů a číslování alb, volitelné doprovodné soubory alba, rychlejší stahování výběru z playlistu a dalších pět jazykových variant s automatickou volbou při prvním spuštění.
+Verze **4.3.0** spojuje Základní a Rozšířený režim, zapamatování předvoleb, hromadné odkazy s individuálním nastavením, zálohu historie a fronty, pozastavení a změnu pořadí, ochranu před uspáním, srovnání hlasitosti zvuku a volitelný SponsorBlock. Vylepšeno je také chování při chybách titulků a počítání skladeb podle kapitol.
 
-**[Přečíst poznámky k vydání 3.12.0 anglicky a česky](https://github.com/petrjones/MediaGrabber/releases/tag/v3.12.0)**
+**[Přečíst poznámky k vydání 4.3.0 anglicky a česky](https://github.com/petrjones/MediaGrabber/releases/tag/v4.3.0)**
 
 ### Zdarma a s dobrovolnou podporou
 
